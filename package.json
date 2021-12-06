@@ -1,0 +1,36 @@
+{
+    "name": "throne-of-glass-api-w-node-express-typescript-planetscale",
+    "version": "1.0.0",
+    "description": "Thone of Glass API build with Node/Express, TypeScript, and PlanetScale",
+    "main": "index.js",
+    "scripts": {
+        "dev": "nodemon src/app.ts",
+        "ts:dev": "npx -w",
+        "ts:build": "rm -rf ./dist && tsc",
+        "prestart": "npm run ts:build",
+        "start": "node dist/app.js",
+        "seed:db": "node ./src/seed.ts"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@types/express": "github:types/express",
+        "@types/node": "^16.11.11",
+        "@typescript-eslint/eslint-plugin": "^5.5.0",
+        "@typescript-eslint/parser": "^5.5.0",
+        "eslint": "^8.3.0",
+        "eslint-config-airbnb-base": "^15.0.0",
+        "eslint-plugin-import": "^2.25.3",
+        "nodemon": "^2.0.15",
+        "ts-node": "^10.4.0",
+        "typescript": "^4.5.2"
+    },
+    "dependencies": {
+        "axios": "^0.24.0",
+        "cheerio": "^1.0.0-rc.10",
+        "dotenv": "^10.0.0",
+        "express": "^4.17.1",
+        "mysql": "^2.18.1"
+    }
+}
